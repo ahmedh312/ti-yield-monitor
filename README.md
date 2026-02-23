@@ -6,6 +6,7 @@ Project Overview:
 This project is a full-stack Industrial IoT (IIoT) simulation designed to monitor semiconductor wafer production. 
 It tracks manufacturing "Pass/Fail" rates in real-time, providing process engineers with a live dashboard to detect production excursions (drops in yield) immediately.
 
+```
 SemiconductorProject/
 ├── backend/
 │   ├── app.py              # Flask API
@@ -18,6 +19,7 @@ SemiconductorProject/
 │   │   └── App.jsx         # React Dashboard
 │   └── package.json
 └── README.md               # Project Documentation
+```
 
 _________________________________________________________________________________________________________________________________________
 
