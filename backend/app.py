@@ -10,7 +10,7 @@ import os
 import datetime
 
 app = Flask(__name__)
-CORS(app) # This allows your React app to talk to this API
+CORS(app) # allows your React app to talk to this API
 
 def get_yield_data():
     import os
@@ -44,7 +44,7 @@ def reset_data():
 def get_trend_data():
     db_path = os.path.join(os.path.dirname(__file__), "ti_factory_data.db")
     conn = sqlite3.connect(db_path)
-    # This query pulls the last 50 scans to calculate a moving trend
+    # query pulls the last 50 scans to calculate a moving trend
     df = pd.read_sql_query("SELECT yield_status FROM manufacturing_yield ORDER BY id DESC LIMIT 50", conn)
     conn.close()
     
@@ -93,7 +93,7 @@ def get_all_stats():
         trend_data = []
         
         if not df.empty:
-            # We group by 10, but use len(group) for the math so it works for the "leftover" wafers
+            # group by 10, but use len(group) for the math so it works for the "leftover" wafers
             for i in range(0, len(df), 10):
                 group = df.iloc[i : i + 10]
                 passes = len(group[group['yield_status'] == 'PASS'])
