@@ -27,7 +27,7 @@ def initialize_factory(num_records=500):
     df = pd.DataFrame(data)
     conn = sqlite3.connect(DB_NAME)
     
-    # We use index=True and index_label='id' to create the ID column 
+    # use index=True and index_label='id' to create the ID column 
     # that the Simulator and Backend expect.
     df.to_sql('manufacturing_yield', conn, if_exists='replace', index=True, index_label='id')
     conn.close()
