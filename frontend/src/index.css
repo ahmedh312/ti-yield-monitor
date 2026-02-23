@@ -1,0 +1,11 @@
+/* This clears out all the default React/Vite alignment stuff */
+body {
+  margin: 0;
+  padding: 0;
+  display: block; 
+  background-color: #121212; /* Matches your dashboard background */
+}
+
+#root {
+  width: 100%;
+}
